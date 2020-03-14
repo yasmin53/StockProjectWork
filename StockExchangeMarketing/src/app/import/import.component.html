@@ -1,0 +1,13 @@
+<div class="container mt-5 w-50 card card-shadow shadow p-5 lg-5 bg-white rounded form-back">
+    <p class="h4 text-center">Import Excel File</p>
+    <div class="custom-file my-3">
+        <input type="file" name="excelFileUpload" id="inputGroupFile" class="custom-file-input"
+            (change)="onFileChange($event)">
+        <br><br><br><br>
+        <label class="custom-file-label" for="inputGroupFile">Choose File</label>
+    </div>
+    <div class="input-group-append">
+        <span class="input-group-text btn-success" (click)="uploadData()" id="inputGroupFileAddon"
+            type="button">Upload</span>
+    </div>
+</div>

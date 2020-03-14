@@ -1,0 +1,20 @@
+<p class="h4 text-center">StockExchange Details</p>
+            
+<form [formGroup]="registerStockExchange" (ngSubmit)="onSubmit()">
+
+<label for="username">Id</label>
+          <input type="number" class="form-control" placeholder="enter id" name="id" id="id" formControlName="id" >
+                <label for="username">StockExchange </label>
+          <input type="text" class="form-control" placeholder="Stock Exchange" name="stockexchangename" formControlName="stockexchangename" id="stockexchangename">
+          <label for="username">Brief</label>
+          <input type="text" class="form-control" placeholder="Brief " name="brief" formControlName="brief" id="brief">
+          <label for="username">Address</label>
+          <input type="text" class="form-control mb-4" placeholder="Address " name="address" formControlName="address" id="address">
+          <label for="username">Remarks</label>
+                <input type="text" class="form-control mb-4" placeholder="Remarks" name="remarks" formControlName="remarks" id="remarks">
+        
+            <br><br>
+          
+         <a onclick="location.href='stockexchanges'"><button class="btn btn-outline-primary" (click)="addStockExchange()"> Add StockExchange</button></a>
+
+          </form>

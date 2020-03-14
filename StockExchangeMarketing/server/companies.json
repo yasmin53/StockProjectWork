@@ -1,0 +1,28 @@
+{
+  "companies": [
+    {
+      "id": 1,
+      "companyName": "hrithik",
+      "ceo": "boolywood",
+      "boardOfDirector": "roshan",
+      "noe": "kjh",
+      "sector": "hgfhd"
+    },
+    {
+      "id": 8642,
+      "companyName": "Companys",
+      "ceo": "Akhil",
+      "boardOfDirector": "Yasmin na Jasmine",
+      "noe": "2",
+      "sector": "Private"
+    },
+    {
+      "id": 56,
+      "companyName": "Analyzers",
+      "ceo": "Yasmin Mohammad",
+      "boardOfDirector": "Akhil",
+      "noe": "2",
+      "sector": "private"
+    }
+  ]
+}

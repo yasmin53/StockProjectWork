@@ -1,0 +1,36 @@
+<div class="col-md-8">
+    <h2 > Update Stock Exchange</h2>
+    <form [formGroup]="updateStockExchange"  >
+      <div class="form-group">
+        <label for="id">Id:</label>
+        <input type="number" formControlName="id" placeholder="Id" name="id" class="form-control" id="id"disabled >
+      </div>
+      <div class="form-group">
+        <label for="stockExchangeName">Stock Exchange Name:</label>
+        <input formControlName="stockexchangename" placeholder="Stock Exchange Name" name="stockexchangename" class="form-control" id="stockexchangename">
+      </div>
+       <div class="form-group">
+        <label for="brief">Brief Description:</label>
+        <input type="text" formControlName="brief" placeholder="Brief" name="brief" class="form-control" id="brief">
+      </div>
+       
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input type="text" formControlName="address" placeholder="Address" name="address" class="form-control" id="address">
+      </div>
+  
+      <div class="form-group">
+        <label for="remarks">Remarks:</label>
+        <input type="text" formControlName="remarks" placeholder="Remarks" name="remarks" class="form-control" id="remarks">
+      </div>
+      
+  
+  
+  
+      <a onclick="location.href='stockexchanges'"><button class="btn btn-success" (click)="updateTheStockExchange()" [disabled]="!updateStockExchange.valid">Update StockExchange</button>
+        </a>
+    
+      </form>
+  </div>
+  
+  

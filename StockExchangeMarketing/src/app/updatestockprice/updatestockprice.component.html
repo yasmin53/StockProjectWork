@@ -1,0 +1,31 @@
+<div class="col-md-8">
+    <h2 > Update Stock Price</h2>
+    <form [formGroup]="updateStockPrice"  >
+      <div class="form-group">
+        <label for="id">Id:</label>
+        <input type="number" formControlName="id" placeholder="Id" name="id" class="form-control" id="id"disabled >
+      </div>
+      <div class="form-group">
+        <label for="companyid">Company Id:</label>
+        <input formControlName="companyid" placeholder="Company Id" name="companyid" class="form-control" id="companyid">
+      </div>
+       <div class="form-group">
+        <label for="curentprice">Current Price:</label>
+        <input type="text" formControlName="currentprice" placeholder="CurrentPrice" name="currentprice" class="form-control" id="currentprice">
+      </div>
+       
+      <div class="form-group">
+        <label for="address">Date Time:</label>
+        <input type="datetime" formControlName="opendatetime" placeholder="OpenDateTime" name="opendatetime" class="form-control" id="opendatetime">
+      </div>
+  
+    
+  
+  
+      <a onclick="location.href='stockprices'"><button class="btn btn-success" (click)="updateTheStockPrice()" [disabled]="!updateStockPrice.valid">Update StockPrice</button>
+        </a>
+    
+      </form>
+  </div>
+  
+  

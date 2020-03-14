@@ -1,0 +1,23 @@
+
+    <table class="table table-bordered">
+    <tr>
+        <td>ID</td>
+        <td>NAME</td>
+        <td>EMAIL</td>
+        <td>PHONE</td>
+       
+       
+        <td>DELETION</td>
+        <td>UPDATION</td>
+    </tr>
+    <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.phone}}</td>
+       
+        <td><button class="btn btn-success" (click)="deleteUser(user)">Delete</button></td>
+        <td><button class="btn btn-warning" (click)="updateUser(user)">Update</button></td>
+    </tr>
+</table>
+

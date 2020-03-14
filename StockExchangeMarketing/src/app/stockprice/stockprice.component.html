@@ -1,0 +1,18 @@
+<p class="h4 text-center">StockPrice</p>
+            
+<form [formGroup]="registerStockPrice" (ngSubmit)="onSubmit()">
+
+<label for="username">Id</label>
+          <input type="number" class="form-control" placeholder="enter id" name="id" id="id" formControlName="id" >
+                <label for="username">Company Id </label>
+          <input type="text" class="form-control" placeholder="Company id" name="companyid" formControlName="companyid" id="companyid">
+          <label for="username">Current Price</label>
+          <input type="text" class="form-control" placeholder="Current Price " name="currentprice" formControlName="currentprice" id="currentprice">
+          <label for="username">OpenDateTime</label>
+          <input type="datetime" class="form-control mb-4" placeholder="OpenDateTime " name="opendatetime" formControlName="opendatetime" id="opendatetime">
+        
+            <br><br>
+          
+         <a onclick="location.href='stockprices'"><button class="btn btn-outline-primary" (click)="addStockPrice()"> Add StockPrice</button></a>
+
+          </form>

@@ -1,0 +1,48 @@
+<div class="col-md-8">
+  <h2 > Update Company</h2>
+  <form [formGroup]="updateCompany"  >
+    <div class="form-group">
+      <label for="id">Id:</label>
+      <input type="number" formControlName="id" placeholder="Company Id" name="id" class="form-control" id="id"disabled >
+    </div>
+    <div class="form-group">
+      <label for="companyName">Company Name:</label>
+      <input formControlName="companyname" placeholder="Company Name" name="companyname" class="form-control" id="companyname">
+    </div>
+     <div class="form-group">
+      <label for="companyCEO">CEO:</label>
+      <input type="text" formControlName="ceo" placeholder="Company CEO" name="ceo" class="form-control" id="ceo">
+    </div>
+     
+    <div class="form-group">
+      <label for="boardOfDirector">BOARD OF DIRECTOR:</label>
+      <input type="text" formControlName="boardOfDirector" placeholder="BOARD OF DIRECTOR" name="boardOfDirector" class="form-control" id="boardOfDirector">
+    </div>
+
+    <div class="form-group">
+      <label for="noe">NO OF EMPLOYEES:</label>
+      <input type="text" formControlName="noe" placeholder="NO OF EMPLOYEES" name="noe" class="form-control" id="noe">
+    </div>
+    <div class="form-group">
+      <label for="sector">SECTOR:</label>
+      <input type="text" formControlName="sector" placeholder="SECTOR" name="sector" class="form-control" id="sector">
+    </div>
+     
+    <label for="username">Company Code</label>
+          
+      <input type="text" class="form-control" placeholder="Company Code"formControlName="companyCode" name="companyCode" id="companyCode" >
+      <div class="form-group">
+        <label for="Select stock exchange">Select Stock Exchange</label>
+        <select class="form-control" id="selectstockexchange" formControlName="selectstockexchange" name="selectstockexchange">
+          <option>NSE</option>
+          <option>BSE</option>
+        </select>
+    </div>
+
+
+    <a onclick="location.href='companies'"><button class="btn btn-success" (click)="updateTheCompany()" [disabled]="!updateCompany.valid">Update Company</button>
+      </a>
+  
+    </form>
+</div>
+

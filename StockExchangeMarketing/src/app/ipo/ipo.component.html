@@ -1,0 +1,27 @@
+<p class="h4 text-center">IPO Details</p>
+            
+<form [formGroup]="registerIPO" (ngSubmit)="onSubmit()">
+
+<label for="username">Id</label>
+          <input type="number" class="form-control" placeholder="enter id" name="id" id="id" formControlName="id" >
+                <label for="username">Company Name </label>
+          <input type="text" class="form-control" placeholder="Company Name" name="companyname" formControlName="companyname" id="companyname">
+          <label for="username">Stock Exchange</label>
+          <input type="text" class="form-control" placeholder="Stock Exchange " name="stockexchanges" formControlName="stockexchanges" id="stockexchanges">
+          <label for="username">Price Per Share</label>
+          <input type="text" class="form-control mb-4" placeholder="Price Per Share " name="pricepershare" formControlName="pricepershare" id="pricepershare">
+          <label for="username">Total Shares</label>
+                <input type="text" class="form-control mb-4" placeholder="Total Shares" name="totalshares" formControlName="totalshares" id="totalshares">
+        
+                <label for="username">Open Date Time</label>
+                <input type="datetime-local" class="form-control mb-4" placeholder="Open Date Time Shares" name="opendatetime" formControlName="opendatetime" id="opendatetime">
+        
+                <label for="username">Remarks</label>
+                <input type="text" class="form-control mb-4" placeholder="Remarks" name="remarks" formControlName="remarks" id="remarks">
+            
+            <br><br>
+          
+         <a onclick="location.href='ipos'"><button class="btn btn-outline-primary" (click)="addIPO()"> Add IPO</button></a>
+
+          </form>
+

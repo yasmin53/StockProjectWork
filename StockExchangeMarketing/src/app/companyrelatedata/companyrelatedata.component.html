@@ -1,0 +1,40 @@
+<header style="color: rgb(21, 37, 54);" class="text-center"><h2>Stock Market Charting</h2></header>
+<div class="jumbotron jumbotron-fluid">
+    <h2 class="text-center">CompanyRelatedData</h2>
+    <div class="container">
+        <form class=" w-50 container" [formGroup]="companyData"  (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="companyname">Company Name</label>
+                <input type="text" class="form-control " name="companyname" formControlName="companyname"
+                placeholder="Enter companyname">
+            </div>
+            <div class="form-group">
+                <label for="turnover">TurnOver</label>
+                <input type="number" class="form-control " name="turnover" formControlName="turnover"
+                placeholder="Enter Id with max 5 digits">
+            </div>
+            <div class="form-group">
+                <label for="ceoname">CEO Name</label>
+                <input type="text" class="form-control " name="ceoname" formControlName="ceoname"
+                placeholder="Enter ceoname">
+            </div>
+            <div class="form-group">
+                    <label for="boardofdirector">BoardOfDirector</label>
+                    <input type="text" class="form-control " name="boardofdirector" formControlName="boardofdirector"
+                    placeholder="Enter Board Of Directory name">
+                </div>
+                <div class="form-group">
+                    <label for="stockexchange">Enter StockExchange</label>
+                    <input type="number" class="form-control " name="stockexchange" formControlName="stockexchange"
+                    placeholder="Enter stockexchange">
+                </div>
+                
+                <div class="form-group">
+                <button class="btn btn-success" (click)="addUser()" [disabled]="!companyData.valid">AddUser</button>
+                    
+                         <button type="reset" onsubmit="onSubmit()" class="btn  btn-success px-5 mx-3">Reset</button>       
+                </div>
+                
+            </form>
+    </div>
+    </div>

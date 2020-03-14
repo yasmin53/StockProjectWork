@@ -1,0 +1,41 @@
+<div class="col-md-8">
+    <h2 > Create An Account</h2>
+    <form [formGroup]="registerUser" (ngSubmit)="onSubmit()">
+      
+      
+      <div class="form-group">
+        <label for="id"> User Id:</label>
+        <input type="number" formControlName="id" placeholder="User Id" name="id" class="form-control" id="id" >
+      </div>
+      <div class="form-group">
+        <label for="name"> Name:</label>
+        <input type="text" formControlName="username" placeholder="Name" name="username" class="form-control" id="username" >
+      </div>
+      <div class="form-group">
+        <label for="email"> Email:</label>
+        <input type="email" formControlName="email" placeholder="Email" name="email" class="form-control" id="email" >
+      </div>
+      <div class="form-group">
+        <label for="phone"> Phone:</label>
+        <input type="number" formControlName="phone" placeholder="Phone Number" name="phone" class="form-control" id="phone" >
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" formControlName="password" placeholder="Password" name="password" class="form-control" id="password">
+      </div>
+      <div class="form-group">
+        <label for="password">Re-Enter Password:</label>
+        <input type="password" formControlName="repassword" placeholder="Re-Enter Password" name="repassword" class="form-control" id="repassword">
+      </div>
+      
+      
+  
+  
+  
+      
+     <a onclick="location.href='users'"> <button class="btn btn-success" (click)="addUser()">Add User</button></a>
+      
+    </form>
+  </div>
+  
+  

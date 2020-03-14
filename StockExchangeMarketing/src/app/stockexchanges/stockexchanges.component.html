@@ -1,0 +1,25 @@
+
+   <table class="table table-bordered">
+        <tr>
+            <td>ID</td>
+            <td> STOCK EXCHANGE NAME</td>
+            <td> BRIEF</td>
+            <td>ADDRESS</td>
+            <td>REMARKS</td>
+            <td>Deletion</td>
+            <td>Updation</td>
+            
+        </tr>
+        <tr *ngFor="let stockexchange of stockexchanges">
+            <td>{{stockexchange.id}}</td>
+            <td>{{stockexchange.stockexchangename}}</td>
+            <td>{{stockexchange.brief}}</td>
+            <td>{{stockexchange.address}}</td>
+            <td>{{stockexchange.remarks}}</td>
+           
+            <td><button class="btn btn-success" (click)="deleteStockExchange(stockexchange)">Delete</button></td>
+            <td><button class="btn btn-warning" (click)="updateStockExchange(stockexchange)">Update</button></td>
+        </tr>
+    </table>
+    
+

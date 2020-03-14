@@ -1,0 +1,63 @@
+<section id="intro">
+    <div class="container">
+      <div class="card bg-light w-52 h-100 mt-5 ">
+        <div class="card-body">
+          <h2>Comparison Charts</h2>
+          <form [formGroup]="compareCompany" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="Select Company/Sector">Select Company/Sector</label>
+                <select class="form-control" id="Select" formControlName="csselect" name="csselect">
+                  <option>Company</option>
+                  <option>Sector</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Select stock exchange">Select Stock Exchange</label>
+                <select class="form-control" id="Select" formControlName="seselect" name="seselect">
+                  <option>NSE</option>
+                  <option>BSE</option>
+                </select>
+            </div>
+            <div class="form-group">
+              <label for="company name/sector name">Company Name/Sector Name</label>
+              <select  class="form-control" id="cnsn" formControlName="cnsn" placeholder="Enter company(or) sector name"
+                name="cnsn" >
+                <option value=""selected disabled >Select Company</option>
+                <option *ngFor="let company of companies"
+                [value]="">
+              {{company.companyCode}}</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="company name/sector name">Company Name/Sector Name Compare To</label>
+                <select class="form-control" id="ctcnsn" formControlName="ctcnsn" placeholder="Enter company(or) sector name Compare To"
+                  name="ctcnsn" >
+                  <option value="" selected disabled >Select Company</option>
+                <option *ngFor="let company of companies"
+                [value]="">
+              {{company.companyCode}}</option>
+                </select>
+              </div>
+            <div class="form-group row">
+                <label for="from period" class="col-2 col-form-label">From Period</label>
+                <div class="col-10">
+                  <input class="form-control" type="date" value="" id="fperiod" formControlName="fperiod"  name="fperiod">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="from period" class="col-2 col-form-label">To Period</label>
+                <div class="col-10">
+                  <input class="form-control" type="date" value="" id="tperiod" formControlName="tperiod"  name="fperiod">
+                </div>
+            </div>
+            <!-- <button type="submit" class="btn btn-info">Genrate Map</button> -->
+            <div class="intro-c ">
+                  <div class="text-center">
+                <button type="submit" class="btn btn-success">Generate</button>
+                 </div>
+              </div>
+             </form>
+        </div>
+      </div>
+    </div>
+  </section>
